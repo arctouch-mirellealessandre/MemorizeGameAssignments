@@ -1,17 +1,12 @@
-//
-//  MemorizeGameAssignmentsApp.swift
-//  MemorizeGameAssignments
-//
-//  Created by Mirelle Alessandre on 08/04/24.
-//
-
 import SwiftUI
 
 @main
-struct MemorizeGameAssignmentsApp: App {
+struct MemorizeAssignmentsApp: App {
+    @StateObject var game = EmojiMemoryGame(theme: Theme.randomTheme)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmojiMemoryGameView(viewModel: game)
         }
     }
 }
